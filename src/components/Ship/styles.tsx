@@ -30,7 +30,7 @@ export const ShipWrapper = styled.div`
     }
     40% {
       top: 800px;
-      left: 800px;
+      left: 805px;
       opacity: 1;
     }
     50% {
