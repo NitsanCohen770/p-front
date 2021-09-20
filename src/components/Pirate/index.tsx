@@ -19,7 +19,7 @@ export const PiratePlayer: React.FC = () => {
   console.log(diceNumber);
 
   const gameEndHandler = () => {
-    mutate({
+    createUserAction({
       action: `Game over, user landed on island ${diceNumber} and was ${messages[diceNumber]?.mainText}}`,
     });
     setTimeout(() => {
