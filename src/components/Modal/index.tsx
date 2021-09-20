@@ -27,13 +27,13 @@ export const Modal: React.FC = () => {
     messages[diceNumber]
   );
   const [funnyMessage, setFunnyMessage] =
-    useState<{ message: string } | null>(null);
+    useState<{ message: string } | undefined>(undefined);
 
   useEffect(() => {
     if (diceNumber === 5) {
       (async () => {
-        const { data } = await fetchRandomMessage();
-        setFunnyMessage(data);
+        const funnyMessage = await fetchRandomMessage();
+        setFunnyMessage(funnyMessage);
       })();
     }
   }, [diceNumber]);
